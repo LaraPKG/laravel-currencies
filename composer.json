@@ -1,0 +1,31 @@
+{
+    "name": "larapkg/laravel-currencies",
+    "description": "Currencies for Laravel",
+    "type": "project",
+    "require": {
+        "laravel/laravel": "^7.12"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ron Appleton",
+            "email": "ron.appleton@gmail.com"
+        },
+        {
+            "name": "Paul Dawson",
+            "email": "me@pauldawson.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LaraPKG\\LaravelCurrencies\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraPKG\\LaravelCurrencies\\ServiceProvider"
+            ]
+        }
+    }
+}

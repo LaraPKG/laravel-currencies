@@ -6,13 +6,35 @@ namespace LaraPKG\LaravelCurrencies;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    public function boot()
+    public function register(): void
     {
-        
+        $this->publishConfig();
+        $this->publishMigrations();
     }
 
-    public function register()
+    /**
+     * Publish the package config file
+     */
+    protected function publishConfig(): void
     {
-        
+        $this->publishes(
+            [
+                __DIR__ . '/../config/intl/currencies.php' => config_path('intl/currencies.php')
+            ],
+            'config'
+        );
+    }
+
+    /**
+     * Publish the [ackage migrations
+     */
+    protected function publishMigrations(): void
+    {
+        $this->publishes(
+            [
+                __DIR__ . '/../database/migrations/' => database_path('migrations')
+            ],
+            'migrations'
+        );
     }
 }

@@ -3,7 +3,7 @@
     "description": "Currencies for Laravel",
     "type": "project",
     "require": {
-        "laravel/laravel": "^7.12"
+        "laravel/laravel": "^7.0"
     },
     "license": "MIT",
     "authors": [

@@ -26,7 +26,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     }
 
     /**
-     * Publish the [ackage migrations
+     * Publish the package migrations
      */
     protected function publishMigrations(): void
     {
